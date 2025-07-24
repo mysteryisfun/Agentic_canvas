@@ -1,0 +1,7 @@
+langchain
+python-dotenv
+langchain-google-generativeai
+lanchain-community
+
+langgraph
+numpy
