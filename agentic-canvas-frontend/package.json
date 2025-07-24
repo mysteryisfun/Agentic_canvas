@@ -12,8 +12,11 @@
   "dependencies": {
     "@react-three/drei": "^10.6.0",
     "@react-three/fiber": "^9.2.0",
+    "axios": "^1.11.0",
+    "express": "^5.1.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "socket.io": "^4.8.1",
     "socket.io-client": "^4.8.1",
     "three": "^0.178.0"
   },
