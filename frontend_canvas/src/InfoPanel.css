@@ -1,18 +1,267 @@
 .info-panel {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 360px;
-    max-height: 500px;
+    position: relative;
+    width: 100%;
+    height: 100%;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.90);
     color: white;
-    border-radius: 10px;
-    font-family: sans-serif;
+    border-radius: 0;
+    font-family: 'Arial', sans-serif;
     z-index: 100;
-    border: 1px solid #333;
+    border: none;
     overflow-y: auto;
     backdrop-filter: blur(5px);
+    box-sizing: border-box;
+}
+
+.step-indicator {
+    background: #4a9eff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.info-panel h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    border-bottom: 2px solid #4a9eff;
+    padding-bottom: 8px;
+    color: #4a9eff;
+    text-align: center;
+}
+
+.planet-card {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(74, 158, 255, 0.1);
+    border-radius: 8px;
+    border: 1px solid rgba(74, 158, 255, 0.3);
+}
+
+.planet-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+    border: 2px solid #4a9eff;
+    box-shadow: 0 0 10px rgba(74, 158, 255, 0.3);
+    animation: planetGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes planetGlow {
+    0% { box-shadow: 0 0 10px rgba(74, 158, 255, 0.3); }
+    100% { box-shadow: 0 0 20px rgba(74, 158, 255, 0.6); }
+}
+
+.planet-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffd93d;
+}
+
+.content-section {
+    margin-bottom: 20px;
+}
+
+.content-item {
+    margin-bottom: 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5px 0;
+    border-left: 3px solid transparent;
+    padding-left: 10px;
+    transition: all 0.3s ease;
+}
+
+.content-item:hover {
+    border-left-color: #4a9eff;
+    background: rgba(74, 158, 255, 0.1);
+    transform: translateX(5px);
+}
+
+/* Fun Educational Sections */
+.fun-fact-section, .question-section {
+    background: rgba(255, 217, 61, 0.1);
+    border: 1px solid rgba(255, 217, 61, 0.3);
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.fun-fact-section h3, .question-section h3 {
+    margin: 0 0 10px 0;
+    color: #ffd93d;
+    font-size: 14px;
+}
+
+.fun-fact-section p, .question-section p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+/* 2D Animation Area */
+.animation-area {
+    height: 80px;
+    margin: 15px 0;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.animation-content {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Sun Rays Animation */
+.sun-rays {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.ray {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    background: linear-gradient(to top, transparent, #ffd93d);
+    transform-origin: bottom center;
+    animation: rayRotate 3s linear infinite;
+}
+
+.ray-0 { transform: rotate(0deg) translateY(-20px); }
+.ray-1 { transform: rotate(45deg) translateY(-20px); }
+.ray-2 { transform: rotate(90deg) translateY(-20px); }
+.ray-3 { transform: rotate(135deg) translateY(-20px); }
+.ray-4 { transform: rotate(180deg) translateY(-20px); }
+.ray-5 { transform: rotate(225deg) translateY(-20px); }
+.ray-6 { transform: rotate(270deg) translateY(-20px); }
+.ray-7 { transform: rotate(315deg) translateY(-20px); }
+
+@keyframes rayRotate {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Speed Lines Animation */
+.speed-lines {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.speed-line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #4a9eff, transparent);
+    animation: speedMove 1.5s linear infinite;
+}
+
+.speed-line-0 { top: 20%; animation-delay: 0s; }
+.speed-line-1 { top: 35%; animation-delay: 0.2s; }
+.speed-line-2 { top: 50%; animation-delay: 0.4s; }
+.speed-line-3 { top: 65%; animation-delay: 0.6s; }
+.speed-line-4 { top: 80%; animation-delay: 0.8s; }
+
+@keyframes speedMove {
+    0% { left: -40px; opacity: 0; }
+    50% { opacity: 1; }
+    100% { left: 100%; opacity: 0; }
+}
+
+/* Earth Rotation */
+.earth-spin {
+    font-size: 40px;
+    animation: earthRotate 4s linear infinite;
+}
+
+@keyframes earthRotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Celebration Animation */
+.celebration {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.confetti {
+    font-size: 20px;
+    animation: bounce 1s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
+}
+
+.current-action {
+    font-style: italic;
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 12px;
+}
+
+.navigation-controls {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.nav-button, .auto-play-button {
+    padding: 8px 15px;
+    border: 1px solid #4a9eff;
+    background: rgba(74, 158, 255, 0.2);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover, .auto-play-button:hover {
+    background: rgba(74, 158, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.nav-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.auto-play-button.active {
+    background: #4a9eff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(74, 158, 255, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(74, 158, 255, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(74, 158, 255, 0); }
 }
 
 .info-panel h2 {
