@@ -1,0 +1,25 @@
+{
+  "name": "multi-agent-canvas-backend",
+  "version": "1.0.0",
+  "description": "WebSocket backend server for Multi-Agent Canvas",
+  "main": "canvas-server.js",
+  "scripts": {
+    "start": "node canvas-server.js",
+    "dev": "node canvas-server.js"
+  },
+  "dependencies": {
+    "uuid": "^11.1.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "keywords": [
+    "websocket",
+    "canvas",
+    "multi-agent",
+    "real-time"
+  ],
+  "author": "Multi-Agent Canvas Team",
+  "license": "MIT"
+}
