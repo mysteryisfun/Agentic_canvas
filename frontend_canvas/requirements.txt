@@ -1,0 +1,55 @@
+# Frontend Canvas - Solar System Visualization Application
+# This file lists the npm packages required for the frontend application.
+# To install these dependencies, run the following command in your terminal:
+# npm install
+
+# Core Dependencies
+react@^19.1.0                    # React framework for building the UI
+react-dom@^19.1.0               # React DOM rendering
+
+# 3D Graphics and Three.js Ecosystem
+three@^0.164.1                  # Three.js for 3D solar system visualization
+three-stdlib@^2.29.6            # Three.js utilities (OrbitControls, CSS2DRenderer)
+@react-three/fiber@^9.2.0       # React renderer for Three.js (if needed for future features)
+@react-three/drei@^10.6.0       # Helper components for React Three Fiber (if needed)
+
+# 2D Canvas (Currently Available)
+konva@^9.3.22                   # 2D canvas library
+react-konva@^19.0.7             # React bindings for Konva
+
+# Networking (For Future Features)
+socket.io-client@^4.8.1         # WebSocket client for real-time features
+
+# Development Dependencies
+@types/react@^19.1.8            # TypeScript definitions for React
+@types/react-dom@^19.1.6        # TypeScript definitions for React DOM
+@types/three@^0.164.0           # TypeScript definitions for Three.js
+@vitejs/plugin-react@^4.6.0     # Vite plugin for React
+typescript@~5.8.3               # TypeScript compiler
+vite@^7.0.4                     # Build tool and dev server
+
+# Code Quality and Linting
+eslint@^9.30.1                  # JavaScript/TypeScript linter
+@eslint/js@^9.30.1              # ESLint JavaScript configurations
+eslint-plugin-react-hooks@^5.2.0 # ESLint rules for React Hooks
+eslint-plugin-react-refresh@^0.4.20 # ESLint rules for React Refresh
+typescript-eslint@^8.35.1       # TypeScript ESLint integration
+globals@^16.3.0                 # Global variables definitions for ESLint
+
+# Project Status: December 2024
+# Features Implemented:
+# - Interactive 3D Solar System with realistic planet textures
+# - Smooth camera controls and animations
+# - Step-by-step guided tour through the solar system
+# - Planet information panels with images
+# - Orbital path visualization
+# - Responsive canvas layout
+# - Real-time planet rotation and orbital motion
+# - Enhanced lighting and visual effects
+
+# Architecture:
+# - React + TypeScript frontend
+# - Three.js for 3D rendering
+# - Vite for development and building
+# - Component-based structure
+# - Canvas container with proper boundaries

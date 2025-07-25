@@ -1,0 +1,17 @@
+.planet-label {
+    color: white;
+    font-family: sans-serif;
+    padding: 2px 5px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    font-size: 12px;
+    pointer-events: none;
+}
+
+.sun-label {
+    color: #ffd93d;
+    font-weight: bold;
+    background: rgba(255, 140, 0, 0.3);
+    border: 1px solid #ffd93d;
+    font-size: 14px;
+}
