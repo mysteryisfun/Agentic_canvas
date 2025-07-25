@@ -1,0 +1,160 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# nyc test coverage
+.nyc_output
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist
+dist-ssr
+build/
+out/
+*.local
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# Environment variable files
+.env
+.env.development.local
+.env.test.local
+.env.production.local
+.env.local
+
+# Parcel-bundler cache
+.cache
+.parcel-cache
+
+# Vite build output
+dist/
+dist-ssr/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Package manager lock files (uncomment the one you're NOT using)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Test coverage
+coverage/
+.coverage
+
+# Solar System Canvas Project Specific
+# Backup files
+*.backup
+*.bak
+*.tmp
+*.temp
+
+# Generated screenshot files
+screenshots/
+*.png.backup
+
+# Large texture file backups
+textures/*.backup
+textures/backup/
+
+# Generated planet data cache
+planet-data-cache/
+
+# Performance logs
+performance-*.log
+
+# Canvas exports
+exports/
+canvas-exports/
+
+# Local development cache
+.local/
+.cache/
+
+# Three.js temporary files
+*.obj.backup
+*.mtl.backup
+
+# Development testing files
+test-screenshots/
+debug-outputs/
+
+# Temporary Three.js shader cache
+shader-cache/
+
+.env
+/venv
